@@ -19,8 +19,8 @@ class Tree {
   preorder(node = this.head) {
     if (node !== null) {
       console.log(node.data);
-      this.inorder(node.left);
-      this.inorder(node.right);
+      this.preorder(node.left);
+      this.preorder(node.right);
     }
   }
 
@@ -34,8 +34,8 @@ class Tree {
 
   postorder(node = this.head) {
     if (node !== null) {
-      this.inorder(node.left);
-      this.inorder(node.right);
+      this.postorder(node.left);
+      this.postorder(node.right);
       console.log(node.data);
     }
   }
